@@ -1,11 +1,11 @@
 package it.epicode.GestionePrenotazioni.Prenotazioni;
 
-import it.epicode.GestionePrenotazioni.Users.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
+@Repository
 public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Long> {
     List<Prenotazione> findByUserId(Long userId);
 }

@@ -18,6 +18,6 @@ prenotazioni con utente è many to one
 postazione con prenotazione è one to many
 prenotazione con postazione è many to one
 
-
+Le logiche di interazione con l'utente le metto nei service e nello scanner
 L'utente può cercare postazione tramite tipo e città, può avere più prenotazioni in corso ma non può prenotare più di
 una postazione in una data - per verificare faccio le query.

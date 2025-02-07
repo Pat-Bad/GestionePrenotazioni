@@ -22,4 +22,13 @@ public class UserConfig {
         user2.setMail("jules@ciao.com");
         return user2;
     }
+
+    @Bean
+    public User user3(){
+        User user3 = new User();
+        user3.setUsername("TerzoUtenteCreato");
+        user3.setNomeCompleto("Olga Olghina");
+        user3.setMail("olga@olga.com");
+        return user3;
+    }
 }

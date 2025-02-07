@@ -23,11 +23,12 @@ public class Postazione {
     private tipoPostazione tipoPostazione;
     private int numeroMaxOccupanti;
     private boolean disponibile;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="edificio_id")
     private Edificio edificio;
 
     @OneToMany(mappedBy = "postazione")
     private List<Prenotazione> listaPrenotazioni = new ArrayList<>();
 
-}
+    }
+
