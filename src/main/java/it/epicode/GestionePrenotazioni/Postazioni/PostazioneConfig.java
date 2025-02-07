@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class PostazioneConfig {
+
     @Bean
     public Postazione postazione1() {
         Postazione postazione1 = new Postazione();
@@ -12,9 +13,9 @@ public class PostazioneConfig {
         postazione1.setTipoPostazione(tipoPostazione.PRIVATO);
         postazione1.setNumeroMaxOccupanti(1);
         postazione1.setDisponibile(true);
-
-       return postazione1;
+        return postazione1;
     }
+
     @Bean
     public Postazione postazione2() {
         Postazione postazione2 = new Postazione();

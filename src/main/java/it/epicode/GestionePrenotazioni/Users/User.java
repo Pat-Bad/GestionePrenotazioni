@@ -4,7 +4,6 @@ import it.epicode.GestionePrenotazioni.Prenotazioni.Prenotazione;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +18,7 @@ public class User {
     private String username;
     private String nomeCompleto;
     private String mail;
+
     @OneToMany(mappedBy="user")
     private List<Prenotazione> listaPrenotazioni = new ArrayList<>();
 }

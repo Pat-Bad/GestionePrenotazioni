@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +23,5 @@ public class Edificio {
     private String citta;
     @OneToMany(mappedBy = "edificio", fetch = FetchType.EAGER)
     @ToString.Exclude
-
     private List<Postazione> listaPostazioni = new ArrayList<>();
 }

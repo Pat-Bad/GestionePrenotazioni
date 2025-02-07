@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +24,13 @@ public class Postazione {
     private tipoPostazione tipoPostazione;
     private int numeroMaxOccupanti;
     private boolean disponibile;
-    @ManyToOne(fetch = FetchType.EAGER)
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="edificio_id")
     private Edificio edificio;
 
     @OneToMany(mappedBy = "postazione")
+@ToString.Exclude
     private List<Prenotazione> listaPrenotazioni = new ArrayList<>();
 
     }

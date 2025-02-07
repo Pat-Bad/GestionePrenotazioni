@@ -12,7 +12,6 @@ public class EdificioConfig {
         edificio1.setNome("Palazzo Stella");
         edificio1.setIndirizzo("Via del Cielo, 5");
         edificio1.setCitta("Milano");
-
         return edificio1;
     };
 
@@ -22,8 +21,5 @@ public class EdificioConfig {
         edificio2.setNome("Palazzo Blu");
         edificio2.setIndirizzo("Via del Mare, 7");
         edificio2.setCitta("Bari");
-
         return edificio2;}
-
-
 }
