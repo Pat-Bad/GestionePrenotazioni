@@ -1,0 +1,23 @@
+Devo creare 4 entità:
+
+- postazione : codice univoco, descrizione, tipo [PRIVATO, OPENSPACE, SALA RIUNIONI], numero max occupanti, edificio,
+disponibile o meno
+- edificio: nome, indirizzo, città, postazioni
+- utente: username, nome completo, mail, prenotazioni
+- prenotazione: utente, postazione, dataPrenotazione, vale un solo giorno, si può fare solo se per quel giorno la
+postazione è libera
+
+
+RELAZIONI
+postazione con edificio è many to one
+edificio con postazione è one to many
+
+utente con prenotazioni è one to many
+prenotazioni con utente è many to one
+
+postazione con prenotazione è one to many
+prenotazione con postazione è many to one
+
+
+L'utente può cercare postazione tramite tipo e città, può avere più prenotazioni in corso ma non può prenotare più di
+una postazione in una data - per verificare faccio le query.
